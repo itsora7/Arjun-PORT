@@ -3,7 +3,7 @@ import countUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-import grad from "../assets/grad1.png";
+import grad11 from "../assets/grad11.png";
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.5,
@@ -13,9 +13,9 @@ const About = () => {
       <div className="container mx-auto p-5">
         <h2 className="text-center underline">About Me</h2>
 
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-x-0 lg:gap-y-0 h-screen">
+        <div className="flex flex-col lg:flex-row lg:items-center">
           <div className=" mix-blend">
-            <img src={grad} />
+            <img src={grad11} />
           </div>
           <div>
             <p className="pt-2 font-primary text-bold italic">
