@@ -2,22 +2,27 @@ import React from "react";
 import Arkstha from "../assets/Arkstha.png";
 import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-// import { motion } from "framer-motion";
-// import { fadeIn } from "../variants";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
 
 const Banner = () => {
   return (
     <section className="section" id="home">
-      <div className="mx-auto">
+      <div className="mx-auto hidden lg:flex max-w-[320px] lg:max-w-[482px]">
         <img src={Arkstha} alt="photo" />
       </div>
       <div className="container mx-auto">
         <div className="font-bold text-[30px] text-white">
-          <h1>
+          <motion.h1
+            variants={fadeIn("up", 0.3)}
+            intial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+          >
             " ARJUN KUMAR <span>SHRESTHA "</span>
-          </h1>
+          </motion.h1>
           <div className="text-[30px] lg:text-[50px] ">
-            <span className="ml-20 text-accent"> I'm a</span>
+            <span className="ml-20 text-accent uppercase"> I'm a</span>
           </div>
 
           <div className="text-white ml-5">
