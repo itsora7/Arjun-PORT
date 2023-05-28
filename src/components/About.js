@@ -14,11 +14,11 @@ const About = () => {
         <h2 className="text-center underline">About Me</h2>
 
         <div className="flex flex-col lg:flex-row lg:items-center">
-          <div className=" mix-blend">
+          <div className=" w-[5000px]">
             <img src={grad11} />
           </div>
           <div>
-            <p className="pt-2 font-primary text-bold italic">
+            <p className="pt-3 font-primary text-bold italic text-[20px]">
               I'm a well-organised, dedicated, experienced Software Engineer
               with having master’s degree in software engineering, adept in all
               stages of Software Development Life Cycle (SDLC). Bringing forth
