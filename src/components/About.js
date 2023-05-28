@@ -18,7 +18,7 @@ const About = () => {
             <img src={grad11} />
           </div>
           <div>
-            <p className="pt-3 font-primary text-bold italic text-[20px]">
+            <p className="pt-3 font-primary text-bold italic text-[20px] text-accent">
               I'm a well-organised, dedicated, experienced Software Engineer
               with having master’s degree in software engineering, adept in all
               stages of Software Development Life Cycle (SDLC). Bringing forth
