@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -23,9 +25,23 @@ module.exports = {
         accent: "#423842",
       },
       backgroundImage: {
-        site: "url('./assets/Shrestha.jpg')",
-        about: "url('./assets/grad1.png')",
+        site: "url('./assets/white.jpg')",
+        about: "url('./assets/grad11.png')",
         services: "url('./assets/services.png')",
+      },
+      animation: {
+        marquee: "marquee 15s linear infinite",
+        marquee2: "marquee2 15s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "50%": { transform: "translateX(50%)" },
+          "0%": { transform: "translateX(0%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(50%)" },
+          "50%": { transform: "translateX(0%)" },
+        },
       },
     },
   },
