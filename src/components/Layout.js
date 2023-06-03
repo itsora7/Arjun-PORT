@@ -1,11 +1,11 @@
 import React from "react";
 
-export const LayOut = ({ children }) => {
+export const LayOut = () => {
   return (
     <footer class="bg-dark flex text-light p-2 justify-between mt-3">
       <div>
         <h3> Arjun Kumar Shrestha</h3>
-        <h4>www.arkshrestha.com</h4>
+        <h4>arkshrestha.com</h4>
         <p>Copyright @ All right reserved by 👣Ark👣</p>
       </div>
       <div></div>

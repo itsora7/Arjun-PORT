@@ -9,19 +9,31 @@ const Banner = () => {
   return (
     <section className="section " id="home">
       <div className="container flex text-center mx-auto">
-        <div className="mx-auto hidden lg:flex max-w-[320px] lg:max-w-[302px]">
+        <motion.div
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="mx-auto hidden lg:flex max-w-[320px] lg:max-w-[302px]"
+        >
           <img src={Arkstha} alt="photo" />
-        </div>
+        </motion.div>
         <div className="font-bold text-[32px] text-accent">
           <motion.h1
-            variants={fadeIn("up", 0.3)}
-            intial="hidden"
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
           >
-            " ARJUN KUMAR <span>SHRESTHA "</span>
+            ARJUN KUMAR <span>SHRESTHA </span>
           </motion.h1>
-          <div className="text-[30px] lg:text-[40px] ">
+          <motion.div
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="text-[30px] lg:text-[40px] "
+          >
             <span className="text-accent uppercase"> I'm a</span>
 
             <div className=" ml-5">
@@ -64,7 +76,7 @@ const Banner = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
