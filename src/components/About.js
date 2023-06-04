@@ -1,11 +1,10 @@
 import React from "react";
-import countUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import grad11 from "../assets/grad11.png";
 const About = () => {
-  const [ref, inView] = useInView({
+  const [ref] = useInView({
     threshold: 0.5,
   });
   return (
@@ -32,7 +31,7 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className=" w-[2500px]"
           >
-            <img src={grad11} />
+            <img src={grad11} alt="grad" />
           </motion.div>
 
           <motion.div

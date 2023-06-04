@@ -17,7 +17,7 @@ const Contact = () => {
               <h4 className="text-xl uppercase text-black font-medium mb-2 tracking-wide">
                 Get In Touch
               </h4>
-              <h2 className="text-[25px] lg:text-[80px] mb-12 leading-none">
+              <h2 className="text-[25px] lg:text-[80px] mb-12 pb-8 leading-none">
                 Drop your message
               </h2>
             </div>
@@ -27,7 +27,7 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start"
+            className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-12 items-start"
           >
             <input
               className="border-b py-3 w-full focus:border-black transaction-all resize-none mb 12"
