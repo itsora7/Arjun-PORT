@@ -69,4 +69,52 @@
   .section {
     @apply py-8 lg:py-24  flex items-center;
   }
+  .proContainer {
+    @apply gap-20;
+  }
+  .pic {
+    @apply w-full;
+  }
+  .prowrapper {
+    @apply p-10;
+  }
+
+  .filterItem ul button:hover {
+    background: #b1bf79;
+    cursor: pointer;
+  }
+  .filterItem ul button {
+    background: darkgray;
+    color: black;
+    padding: 8px 80px;
+    text-transform: uppercase;
+    border: navajowhite;
+    font-size: 20px;
+    border-radius: 50px;
+  }
+  .filterItem ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .proContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .prowrapper {
+    padding: 0% 10%;
+  }
+
+  .pic img {
+    display: flex;
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+  }
 }

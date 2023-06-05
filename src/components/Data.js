@@ -1,27 +1,39 @@
+import LMS from "../assets/LMS.jpg";
+import SRI from "../assets/sri.jpg";
+import ETA from "../assets/ETA.jpg";
+import movies from "../assets/movies.jpg";
+import myport from "../assets/myport.jpg";
+import movie from "../assets/movie.jpg";
+
 export const Data = [
   {
     id: 1,
-    title: "fullstack",
-    image: "./assets/LMS.png",
+    title: "Fullstack",
+    image: LMS,
   },
   {
     id: 2,
-    title: "fullstack",
-    image: "./assets/sri.png",
+    title: "Fullstack",
+    image: SRI,
   },
   {
     id: 3,
-    title: "web",
-    image: "./assets/ETA.png",
+    title: "Web",
+    image: ETA,
   },
   {
     id: 4,
-    title: "web",
-    image: "./assets/movies.png",
+    title: "Web",
+    image: movies,
   },
   {
     id: 5,
-    title: "web",
-    image: "./assets/myport.png",
+    title: "Web",
+    image: myport,
+  },
+  {
+    id: 6,
+    title: "Web",
+    image: movie,
   },
 ];
