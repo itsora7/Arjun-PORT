@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Data } from "./Data";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+
 const Projects = ({ handleOnFilter }) => {
   const [data, setData] = useState([]);
   const [pro, setPro] = useState([]);
@@ -18,7 +21,13 @@ const Projects = ({ handleOnFilter }) => {
     <section className="section" id="projects">
       <div className="Projects">
         <div className="prowrapper">
-          <div className="filterItem">
+          <motion.div
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="filterItem"
+          >
             <ul className="">
               <li>
                 <button onClick={() => setData(Data)}>All</button>
@@ -35,15 +44,21 @@ const Projects = ({ handleOnFilter }) => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="proContainer">
+          </motion.div>
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="proContainer"
+          >
             {data.map((item) => (
               <div key={item.id} className="pic">
                 {" "}
                 <img src={item.image} alt="project" />
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

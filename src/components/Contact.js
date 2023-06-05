@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
-const Contact = () => {
+import emailjs from "emailjs-com";
+
+const Result = () => {
+  return <p> Your message is successfully sent. I will contact you soon!</p>;
+};
+const Contact = (props) => {
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gg7u04e",
+        "template_zuhw28t",
+        e.target,
+        "xD0baQ1mYX0jfUQzg"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    showResult(true);
+  };
+  setTimeout(() => {
+    showResult(false);
+  }, 5000);
   return (
-    <section className="py-16 lg:section" id="contact">
+    <section className="py-16 lg:section" id="contact" onSubmit={sendEmail}>
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           <motion.div
@@ -33,22 +63,25 @@ const Contact = () => {
               className="border-b py-3 w-full focus:border-black transaction-all resize-none mb 12"
               type="text"
               placeholder="Your name"
+              name="fullName"
             />
             <input
               className="border-b py-3 w-full focus:border-black transaction-all resize-none mb 12"
               type="text"
               placeholder="Your email"
+              name="email"
             />
             <textarea
               className="border-b py-3 w-full focus:border-accent transaction-all outline-none mb-12 resize-none"
               placeholder="Message"
+              name="message"
             ></textarea>
             <button className="btn ">Send Message</button>
+            <div className="row">{result ? <Result /> : null}</div>
           </motion.form>
         </div>
       </div>
     </section>
   );
 };
-
 export default Contact;
